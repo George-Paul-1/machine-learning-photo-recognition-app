@@ -52,7 +52,7 @@ def train_model(opt, model, train_images, train_labels, test_images, test_labels
                     from_logits=True),
                     metrics=['accuracy'])
     
-    history = model.fit(train_images, train_labels, epochs=500, validation_data=(test_images, test_labels))
+    history = model.fit(train_images, train_labels, epochs=30, validation_data=(test_images, test_labels))
     
     # Check if the model directory exists 
     if os.path.exists('model'):
